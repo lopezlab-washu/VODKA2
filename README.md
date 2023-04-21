@@ -69,7 +69,7 @@ Emna Achouri - emna@wustl.edu
 
 Carolina López - clopezzalaquett@wustl.edu
 
-Project Link: [https://github.com/lopez-washu/VODKA2](https://github.com/eachouri/VODKA2)
+Project Link: [https://github.com/lopezlab-washu/VODKA2](https://github.com/lopezlab-washu/VODKA2)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
