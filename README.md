@@ -141,7 +141,7 @@ Run the setup script:
     RSV_R2.vodka2.all-info_CB.N5_mode_plot.tiff</code>     (plots using data from result tables)<br/>
     <code>TEST_CB_dvg_summary.txt</code>     (summary results table)<br/>
     
-<br/>
+
 <!-- CONTACT -->
 ## Contact
 
