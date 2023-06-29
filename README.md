@@ -131,13 +131,13 @@ Run the setup script:
 
     <b>TEST/ content should be:</b>
     
-    <code>vodka2_output_CB/</code>
+    <code>vodka2_output_CB/</code><br/>
     <code>TEST_CB_dvg/</code>    (these folders contain intermediate outputs)<br/>
-    <code>RSV_R1.vodka2.all-info_CB.N5.txt</code>
-    <code>RSV_R2.vodka2.all-info_CB.N5.txt</code>
-    <code>RSV_R1.vodka2.all-info_CB.N5_mode.txt</code>
+    <code>RSV_R1.vodka2.all-info_CB.N5.txt</code><br/>
+    <code>RSV_R2.vodka2.all-info_CB.N5.txt</code><br/>
+    <code>RSV_R1.vodka2.all-info_CB.N5_mode.txt</code><br/>
     <code>RSV_R2.vodka2.all-info_CB.N5_mode.txt</code>    (these are the VODKA2 result tables that should be used for downstream analysis)<br/>
-    <code>RSV_R1.vodka2.all-info_CB.N5_mode_plot.tiff</code>
+    <code>RSV_R1.vodka2.all-info_CB.N5_mode_plot.tiff</code><br/>
     <code>RSV_R2.vodka2.all-info_CB.N5_mode_plot.tiff</code>     (plots using data from result tables)<br/>
     <code>TEST_CB_dvg_summary.txt</code>     (summary results table)<br/>
     
