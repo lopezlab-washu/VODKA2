@@ -73,63 +73,75 @@ Option 2: Run the VODKA2 docker container
 
  2. Run analysis
 
-    <code>bash cbVG_VODKA2_analysis_<project>.sh</code>
-or
-    <code>bash delVG_VODKA2_analysis_<project>.sh</code>
+    <code>bash cbVG_VODKA2_analysis_\<project\>.sh</code><br/>
+or<br/>
+    <code>bash delVG_VODKA2_analysis_\<project\>.sh</code><br/>
 
 <!-- TEST RUN -->
 ## TEST RUN
 
-Download test dataset from this repository
-   - Reference genome: RSVKC731482geneG.fasta
-   - RSV_geneG_artificial_CB_R1.fastq
-   - RSV_geneG_artificial_CB_R1.fastq
+Download test data from this repository<br/>
+* Reference genome:
+    * RSVKC731482geneG.fasta
+* Simuated Illumina Seq data:
+    * RSV_geneG_artificial_CB_R1.fastq
+    * RSV_geneG_artificial_CB_R1.fastq
+<br/>
 
 1. Start the VODKA2 Docker container
-
+```
    docker pull emna20/vodka2:v1
+```
+Once the VODKA2 container has started, make sure Blast commands are in your PATH:
+```
+   export PATH="/blast/bin:$PATH"
+``` 
 
-   Once the VODKA2 container has started, make sure Blast commands are in your PATH:
-
-   export PATH=/blast/bin:$PATH"
-   
-3. Generate the VODKA2 cbVG database
-
+2. Generate the VODKA2 cbVG database (DB)
+```
    perl /VODKA2/genomefa_to_newfasta_cb_v2.pl RSVKC731482geneG.fasta 966 150 RSVKC731482geneG.966.150.fasta
-   
-5. Generate bowtie2 index
+```
 
+3. Generate bowtie2 index for VODKA2 DB and ref genome
+```
    bowtie2-build --large-index RSVKC731482geneG.966.150.fasta RSVKC731482geneG.966.150
+```
+```
    bowtie2-build RSVKC731482geneG.fasta RSVKC731482geneG.fasta
-   
-6. Setup the VODKA2 analysis script
+```
 
-   Create a file with the fastq files:
+4. Setup the VODKA2 analysis script
 
+Create a file with the fastq files:
+```
    ls RSV_geneG_artificial_R*.fastq > samples.txt
+```
 
-   Run the setup script
-
+Run the setup script:
+```
    bash /VODKA2/VODKA2_analysis_setup.sh -f samples.txt -d RSVKC731482geneG.966.15 -v RSVKC731482geneG.fasta -p TEST
-   
-8. Run the analysis
+```
 
+5. Run the analysis
+```
    ./cbDVG_analysis_TEST.sh
-   
-10. Check results
+```
 
-    TEST/ content should be:
-    vodka2_output_CB/
-    TEST_CB_dvg/    (these folders contain intermediate outputs)
-    RSV_R1.vodka2.all-info_CB.N5.txt
+6. Check results
+
+    <b>TEST/ content should be:</b>
+    
+    <code>vodka2_output_CB/
+    TEST_CB_dvg/</code>    (these folders contain intermediate outputs)<br/>
+    <code>RSV_R1.vodka2.all-info_CB.N5.txt
     RSV_R2.vodka2.all-info_CB.N5.txt
     RSV_R1.vodka2.all-info_CB.N5_mode.txt
-    RSV_R2.vodka2.all-info_CB.N5_mode.txt   (these are the VODKA2 result tables that should be used for downstream analysis) 
-    RSV_R1.vodka2.all-info_CB.N5_mode_plot.tiff
-    RSV_R2.vodka2.all-info_CB.N5_mode_plot.tiff    (plots using data from result tables)
-    TEST_CB_dvg_summary.txt    (summary results table)
+    RSV_R2.vodka2.all-info_CB.N5_mode.txt</code>    (these are the VODKA2 result tables that should be used for downstream analysis)<br/>
+    <code>RSV_R1.vodka2.all-info_CB.N5_mode_plot.tiff
+    RSV_R2.vodka2.all-info_CB.N5_mode_plot.tiff</code>     (plots using data from result tables)<br/>
+    <code>TEST_CB_dvg_summary.txt</code>     (summary results table)<br/>
     
-
+<br/>
 <!-- CONTACT -->
 ## Contact
 
