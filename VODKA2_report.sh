@@ -38,10 +38,10 @@ if [ ! "$N" ]; then
   N=5
 fi
 
-# Extract genome length from vodka output file
+# Extract genome length from vodka2 output file
 # project folder
-vodka_folder="${PWD}/${PROJECT}_vodka_results"
-gl=$(ls ${vodka_folder}/vodka_output_${DVGTYPE}/*/*/*search_output.txt | head -1 | rev | cut -d "." -f 4 | rev)
+vodka_folder="${PWD}"
+gl=$(ls ${vodka_folder}/vodka2_output_${DVGTYPE}/*/*/*search_output.txt | head -1 | rev | cut -d "." -f 4 | rev)
 
 echo
 echo -e "\t* ${DVGTYPE}VG extra info report *"
@@ -58,7 +58,7 @@ echo -e "Extracting DVG fastq read ids\n"
 cut -f 2 ${vodka_results} | grep -v READ_ID > ${SAMPLENAME}.readids.txt
 
 # extract FLAG info from SAM file
-sam="${vodka_folder}/vodka_output_${DVGTYPE}/${SAMPLENAME}_vodka_output/alignment/${SAMPLENAME}.*.sam"
+sam="${vodka_folder}/vodka2_output_${DVGTYPE}/${SAMPLENAME}_vodka2_output/alignment/${SAMPLENAME}.*.sam"
 echo -e "Extracting read orientation\n"
 join --nocheck-order <(sort ${SAMPLENAME}.readids.txt) <(sort ${sam}) | cut -f 1,2 -d " " > ${SAMPLENAME}.readstrands.txt
 

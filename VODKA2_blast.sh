@@ -52,8 +52,8 @@ echo -e "Extracting DVG fasta sequences\n"
 samplefaB=$(basename ${SAMPLETXT} .txt)_B.fa
 samplefaR=$(basename ${SAMPLETXT} .txt)_R.fa
 sample=$(basename ${SAMPLETXT} ${SUFFIX})
-tail -n +2 ${SAMPLETXT} | cut -f 1,2,10 | tr -d "<>" | sed 's/[ATCGN]*::://' | sed 's/\t/-/' | sed 's/^/>/g' | tr "\t" "\n" > ${fastaB}
-tail -n +2 ${SAMPLETXT} | cut -f 1,2,10 | tr -d "<>" | sed 's/:::.*//' | sed 's/\t/-/' | sed 's/^/>/g' | tr "\t" "\n" > ${fastaR}
+tail -n +2 ${SAMPLETXT} | cut -f 1,2,10 | tr -d "<>" | sed 's/[ATCGN]*::://' | sed 's/\t/-/' | sed 's/^/>/g' | tr "\t" "\n" > ${samplefaB}
+tail -n +2 ${SAMPLETXT} | cut -f 1,2,10 | tr -d "<>" | sed 's/:::.*//' | sed 's/\t/-/' | sed 's/^/>/g' | tr "\t" "\n" > ${samplefaR}
 
 # genome length
 gl=$(echo ${SUFFIX} | rev | cut -d "." -f 3 | rev)

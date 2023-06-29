@@ -39,7 +39,7 @@ if [ ! "$samplesfile" ] || [ ! "$vodkabt2" ] || [ ! "$project" ] ; then
 fi
 
 # VODKA2 scripts folder
-VODKA2scripts="${PWD}/VODKA2"
+VODKA2scripts="/VODKA2"
 
 # project folder
 vodka2_folder="${PWD}/${project}_vodka2_results"
@@ -99,7 +99,6 @@ if [ ${ty} == "DEL" ]; then
 fi
 
 ## SETUP FOLDERS AND REF INDEX ##
-echo "cd ${vodka2_folder}/${project}_${DVGtype}_dvg" > vodka2_step1_${project}_${DVGtype}.sh
 cmd="bowtie2-build ${virusfas_name} ${virusfas_name}"
 echo "${cmd}" >> vodka2_step1_${project}_${DVGtype}.sh
 echo "cd ${vodka2_folder}/${project}_${DVGtype}_dvg" > vodka2_step5_${project}_${DVGtype}.sh
