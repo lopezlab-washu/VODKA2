@@ -106,9 +106,6 @@ Once the VODKA2 container has started, make sure Blast commands are in your PATH
 ```
    bowtie2-build --large-index RSVKC731482geneG.966.150.fasta RSVKC731482geneG.966.150
 ```
-```
-   bowtie2-build RSVKC731482geneG.fasta RSVKC731482geneG.fasta
-```
 
 4. Setup the VODKA2 analysis script
 
