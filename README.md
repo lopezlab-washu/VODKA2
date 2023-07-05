@@ -116,7 +116,7 @@ Create a file with the fastq files:
 
 Run the setup script:
 ```
-   bash /VODKA2/VODKA2_analysis_setup.sh -f samples.txt -d RSVKC731482geneG.966.15 -v RSVKC731482geneG.fasta -p TEST
+   bash /VODKA2/VODKA2_analysis_setup.sh -f samples.txt -d RSVKC731482geneG.966.150 -v RSVKC731482geneG.fasta -p TEST
 ```
 
 5. Run the analysis
