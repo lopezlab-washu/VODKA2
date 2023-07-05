@@ -114,7 +114,7 @@ Once the VODKA2 container has started, make sure Blast commands are in your PATH
 
 Create a file with the fastq files:
 ```
-   ls RSV_geneG_artificial_R*.fastq > samples.txt
+   ls RSV_geneG_artificial_CB_R*.fastq > samples.txt
 ```
 
 Run the setup script:
