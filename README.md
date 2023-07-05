@@ -102,7 +102,7 @@ Once the VODKA2 container has started, make sure Blast commands are in your PATH
    perl /VODKA2/genomefa_to_newfasta_cb_v2.pl RSVKC731482geneG.fasta 966 150 RSVKC731482geneG.966.150.fasta
 ```
 
-3. Generate bowtie2 index for VODKA2 DB and ref genome
+3. Generate bowtie2 index for VODKA2 DB
 ```
    bowtie2-build --large-index RSVKC731482geneG.966.150.fasta RSVKC731482geneG.966.150
 ```
